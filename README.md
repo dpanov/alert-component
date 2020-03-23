@@ -1,3 +1,3 @@
-# ParcelJS-based project template
+# Project notes
 
-Ready to be deployed to Netlify and have that sweet 100/100 Lighthouse score.
+1. Inline alert with link - close button is not at the same position. Is this intentional?
