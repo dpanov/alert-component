@@ -3,14 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ParcelJS-based project template</title>
+  <title>Falcon.io alert component</title>
   <meta name="description" content="" />
   
   <link rel="stylesheet" href="./src/css/styles.scss">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1>ParcelJS-based project template</h1>
+  <div class="alert">
+    <img src="" alt="" />
+
+    <div class="alert__content">
+      <strong>Info summary</strong>
+
+      <p>
+        Invest boots on the ground think tank impact investing innovation inspire impact investing revolutionary problem-solvers. <a class="link" href="#">Action.</a>
+      </p>
+
+      <button class="button button--outlined">Action</button>
+    </div>
+
+    <button class="button button--close"></button>
+  </div><!-- alert -->
+
+  <div class="alert alert--inline">
+    <img src="" alt="" />
+
+    <div class="alert__content alert__content--inline">
+      <p>
+        The point of the message on the ground think tank impact investing 
+      </p>
+
+      <button class="button button--outlined">Action</button>
+    </div>
+
+    <button class="button button--close"></button>
+  </div><!-- alert -->
+
   <script src="./src/js/scripts.js"></script>
 </body>
 </html>
