@@ -1,0 +1,17 @@
+.button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: #495B66;
+  display: inline-block;
+  font-family: var(--font-family);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 15px;
+  padding: 3px 7px 4px;
+  text-transform: uppercase;
+}
+
+.button--outlined {
+  border-color: #DADDE0;
+}
