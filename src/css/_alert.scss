@@ -1,0 +1,73 @@
+:root {
+  --horizontal-gap: 20px;
+  --vertical-gap: 16px;
+}
+
+.alert {
+  align-items: start;
+  background-color: #fff;
+  border: 1px solid #DADDE0;
+  border-left: 4px solid transparent;
+  border-radius: 2px;
+  column-gap: var(--horizontal-gap);
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  justify-content: space-between;
+  padding: var(--vertical-gap) var(--horizontal-gap);
+  row-gap: var(--vertical-gap);
+}
+
+
+/**
+ * Variations by type
+ */
+.alert--info {
+  border-left-color: var(--color-info);
+}
+.alert--warning {
+  border-left-color: var(--color-warning);
+}
+.alert--error {
+  border-left-color: var(--color-error);
+}
+.alert--success {
+  border-left-color: var(--color-success);
+}
+
+
+/**
+ * Variations by structure
+ */
+.alert--inline {
+  align-items: center;
+}
+
+.alert--static {
+  grid-template-columns: min-content 1fr;
+}
+
+/**
+ * Children elements
+ */
+.alert__content {
+  display: grid;
+  font-size: 12px;
+  justify-items: start;
+  grid-gap: 8px; // if this is dependend on the 16px vertical padding then we could use calc(var(--vertical-gap) / 2);
+}
+
+.alert__title {
+  font-size: 12px;
+  font-size: 700;
+  line-height: 1.5;
+}
+
+.alert__text {
+  margin: 0;
+}
+
+.alert__actions {
+  display: grid;
+  column-gap: var(--horizontal-gap);
+  grid-auto-flow: column;
+}

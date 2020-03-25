@@ -7,11 +7,47 @@
   font-family: var(--font-family);
   font-size: 11px;
   font-weight: 700;
-  line-height: 15px;
-  padding: 3px 7px 4px;
+  line-height: 20px;
+  padding: 0 7px 0;
   text-transform: uppercase;
+  transition: background-color .2s ease;
 }
 
+// Outlined
 .button--outlined {
   border-color: #DADDE0;
 }
+.button--outlined:hover {
+  background: #efefef;
+}
+
+// Close button
+.button--close {
+  fill: #8FA3B0;
+  font-size: 0;
+  line-height: 1;
+  padding: 0;
+  position: relative;
+
+  > svg {
+    transition: fill .2s ease;
+  }
+
+  &::before {
+    --expand: -10px;
+    bottom: var(--expand);
+    content: "";
+    left: var(--expand);
+    position: absolute;
+    right: var(--expand);
+    top: var(--expand);
+  }
+}
+.button--close:hover {
+  box-shadow: none;
+
+  & > svg {
+    fill: #000;
+  }
+}
+

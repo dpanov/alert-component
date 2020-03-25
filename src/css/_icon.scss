@@ -1,4 +1,28 @@
 .icon {
   width: 24px;
   height: 24px;
+  max-width: max-content;
+}
+
+
+// By size
+.icon--sm {
+  width: 12px;
+  height: 12px;
+}
+
+
+// BY TYPE
+// This can be done with looping an array with the color names, but I find it easier to read and understand just by writing them manually
+.icon--info {
+  fill: var(--color-info);
+}
+.icon--warning {
+  fill: var(--color-warning);
+}
+.icon--error {
+  fill: var(--color-error);
+}
+.icon--success {
+  fill: var(--color-success);
 }
