@@ -40,6 +40,10 @@
  */
 .alert--inline {
   align-items: center;
+  grid-template-columns: min-content 1fr min-content min-content;
+}
+.alert--inline.alert--not-closable {
+  grid-template-columns: min-content 1fr min-content;
 }
 
 .alert--static {

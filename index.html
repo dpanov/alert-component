@@ -12,6 +12,11 @@
 
 <body>
   <div class="content">
+    <div>
+      <h2>Standard alerts</h2>
+      <p>Always have three columns: "icon content close". When the alert can't be closed, the close column is empty, but the space between the columns is still there. That's how we get the 40 px space on the right. Action button is always at the bottom.</p>
+    </div>
+
     <div class="alert alert--info">
       <svg class="icon icon--info" width="24" height="24" viewBox="0 0 24 24" fill="#8FA3B0" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 0C5.3725 0 0 5.3725 0 12C0 18.6275 5.3725 24 12 24C18.6275 24 24 18.6275 24 12C24 5.3725 18.6275 0 12 0ZM12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22Z"/>
@@ -42,8 +47,7 @@
       <svg class="icon icon--success" width="24" height="24" viewBox="0 0 24 24" fill="#8FA3B0" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.101 7.48901L14.213 10.3775L14.218 10.382L10.2795 14.3205L6.8955 10.9355L5.798 12.033L9.677 15.9125L9.6735 15.9165L10.2685 16.5105L10.272 16.508L10.2755 16.5105L10.541 16.246L10.5435 16.2485L15.3135 11.4785L18.202 8.59001L17.101 7.48901Z"/>
         <path d="M12 0C5.3725 0 0 5.3725 0 12C0 18.6275 5.3725 24 12 24C18.6275 24 24 18.6275 24 12C24 5.3725 18.6275 0 12 0ZM12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22Z"/>
-        </svg>
-        
+      </svg>
 
       <div class="alert__content">
         <strong>Info summary</strong>
@@ -59,24 +63,26 @@
       </div>
     </div>
 
+    <div>
+      <h2>Inline alerts</h2>
 
-    <div class="alert alert--info alert--inline">
+      <p>Have four columns: "icon content action close". Unless the close button is missing, then it should have three columns. It's a bit weird that by design, when the action button is missing there are still four columns, and the close button should bet placed in the third column. </p>
+    </div>
+
+    <div class="alert alert--inline alert--info">
       <svg class="icon icon--info" width="24" height="24" viewBox="0 0 24 24" fill="#8FA3B0" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 0C5.3725 0 0 5.3725 0 12C0 18.6275 5.3725 24 12 24C18.6275 24 24 18.6275 24 12C24 5.3725 18.6275 0 12 0ZM12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22Z"/>
         <path d="M12 8.4845C12.5523 8.4845 13 8.03678 13 7.4845C13 6.93221 12.5523 6.4845 12 6.4845C11.4477 6.4845 11 6.93221 11 7.4845C11 8.03678 11.4477 8.4845 12 8.4845Z"/>
         <path d="M12.9995 9.9845H11.001V17.5H12.9995V9.9845Z"/>
       </svg>
 
-      <div class="alert__content">
+      <div class="alert__content alert__content--inline">
         <p class="alert__text">
-          Theon the ground think impact investing 
+          Closable, no action button
         </p>
-
       </div>
 
       <div class="alert__actions">
-        <button class="button button--outlined">Action</button>
-
         <button class="button button--close">
           <svg width="12" height="12" viewBox="0 0 12 12" fill="#8FA3B0" xmlns="http://www.w3.org/2000/svg">
            <path d="M11 2.00714L9.99286 1L6 4.99286L2.00714 1L1 2.00714L4.99286 6L1 9.99286L2.00714 11L6 7.00714L9.99286 11L11 9.99286L7.00714 6L11 2.00714Z" />
@@ -86,41 +92,43 @@
     </div>
 
 
-    <div class="alert alert--error alert--inline">
+    <div class="alert alert--inline alert--error">
+      <svg class="icon icon--error" width="24" height="24" viewBox="0 0 24 24" fill="#8FA3B0" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.8 15.6H13.2V18H10.8V15.6ZM10.8 6H13.2V13.2H10.8V6ZM11.988 0C5.364 0 0 5.376 0 12C0 18.624 5.364 24 11.988 24C18.624 24 24 18.624 24 12C24 5.376 18.624 0 11.988 0ZM12 21.6C6.696 21.6 2.4 17.304 2.4 12C2.4 6.696 6.696 2.4 12 2.4C17.304 2.4 21.6 6.696 21.6 12C21.6 17.304 17.304 21.6 12 21.6Z"/>
+      </svg>
+
+      <div class="alert__content alert__content--inline">
+        <p class="alert__text">
+          Closable and has action button 
+        </p>
+      </div>
+      
+      <button class="button button--outlined">Action</button>
+
+      <div class="alert__actions">
+        <button class="button button--close">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="#8FA3B0" xmlns="http://www.w3.org/2000/svg">
+           <path d="M11 2.00714L9.99286 1L6 4.99286L2.00714 1L1 2.00714L4.99286 6L1 9.99286L2.00714 11L6 7.00714L9.99286 11L11 9.99286L7.00714 6L11 2.00714Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+
+    <div class="alert alert--inline alert--error">
       <svg class="icon icon--error" width="24" height="24" viewBox="0 0 24 24" fill="#8FA3B0" xmlns="http://www.w3.org/2000/svg">
         <path d="M10.8 15.6H13.2V18H10.8V15.6ZM10.8 6H13.2V13.2H10.8V6ZM11.988 0C5.364 0 0 5.376 0 12C0 18.624 5.364 24 11.988 24C18.624 24 24 18.624 24 12C24 5.376 18.624 0 11.988 0ZM12 21.6C6.696 21.6 2.4 17.304 2.4 12C2.4 6.696 6.696 2.4 12 2.4C17.304 2.4 21.6 6.696 21.6 12C21.6 17.304 17.304 21.6 12 21.6Z"/>
       </svg>
 
       <div class="alert__content">
         <p class="alert__text">
-          Theon the ground think impact investing 
+          Not closable and no action button <a class="link" href="#">Action.</a>
         </p>
-
-      </div>
-      
-      <div class="alert__actions">
-        <button class="button button--outlined">Action</button>
       </div>
     </div>
 
 
-    <div class="alert alert--error alert--inline">
-      <svg class="icon icon--error" width="24" height="24" viewBox="0 0 24 24" fill="#8FA3B0" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10.8 15.6H13.2V18H10.8V15.6ZM10.8 6H13.2V13.2H10.8V6ZM11.988 0C5.364 0 0 5.376 0 12C0 18.624 5.364 24 11.988 24C18.624 24 24 18.624 24 12C24 5.376 18.624 0 11.988 0ZM12 21.6C6.696 21.6 2.4 17.304 2.4 12C2.4 6.696 6.696 2.4 12 2.4C17.304 2.4 21.6 6.696 21.6 12C21.6 17.304 17.304 21.6 12 21.6Z"/>
-      </svg>
-
-      <div class="alert__content">
-        <p class="alert__text">
-          The point of the message on the ground think tank impact investing inspire. <a class="link" href="#">Action.</a>
-        </p>
-      </div>
-      
-      <div class="alert__actions">
-      </div>
-    </div>
-
-
-    <div class="alert alert--info">
+    <div class="alert alert--inline alert--not-closable alert--info">
       <svg class="icon icon--info" width="24" height="24" viewBox="0 0 24 24" fill="#8FA3B0" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 0C5.3725 0 0 5.3725 0 12C0 18.6275 5.3725 24 12 24C18.6275 24 24 18.6275 24 12C24 5.3725 18.6275 0 12 0ZM12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22Z"/>
         <path d="M12 8.4845C12.5523 8.4845 13 8.03678 13 7.4845C13 6.93221 12.5523 6.4845 12 6.4845C11.4477 6.4845 11 6.93221 11 7.4845C11 8.03678 11.4477 8.4845 12 8.4845Z"/>
@@ -129,12 +137,27 @@
 
       <div class="alert__content">
         <p class="alert__text">
-          <strong>The point of the message</strong> on the ground think tank impact investing inspire.
+          <strong>Has action button</strong> but not closable
         </p>
       </div>
-      
-      <div class="alert__actions">
+
+      <button class="button button--outlined">Action</button>
+    </div>
+
+    <div class="alert alert--inline alert--not-closable alert--info">
+      <svg class="icon icon--info" width="24" height="24" viewBox="0 0 24 24" fill="#8FA3B0" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0C5.3725 0 0 5.3725 0 12C0 18.6275 5.3725 24 12 24C18.6275 24 24 18.6275 24 12C24 5.3725 18.6275 0 12 0ZM12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22Z"/>
+        <path d="M12 8.4845C12.5523 8.4845 13 8.03678 13 7.4845C13 6.93221 12.5523 6.4845 12 6.4845C11.4477 6.4845 11 6.93221 11 7.4845C11 8.03678 11.4477 8.4845 12 8.4845Z"/>
+        <path d="M12.9995 9.9845H11.001V17.5H12.9995V9.9845Z"/>
+      </svg>
+
+      <div class="alert__content">
+        <p class="alert__text">
+          <strong>Has action button</strong> but not closable and has more text that can't be fitted in a single line
+        </p>
       </div>
+
+      <button class="button button--outlined">Action</button>
     </div>
   </div>
 
