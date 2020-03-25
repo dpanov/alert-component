@@ -4,6 +4,7 @@
 2. Run `npm install`
 3. Run `npm run dev`
 4. Open http://localhost:1234/index.html or http://localhost:1234/index-flexbox.html
+5. Also available at https://falcon-alert-component.netlify.com/
 
 Note: The Flexbox version is a little bit outdated (especially in terms of a11y), compared to the Grid one
 
