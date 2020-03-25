@@ -34,6 +34,9 @@ Variations:
 Research more about role="alert" and consider using it
 
 
+# Example how a React component would look like
+We could either have a single <alert> component and will choose the appropriate variation (standard vs. inline) based on if the title is set
+```JSX
 <alert type="warning" 
        is-closable="true"
        action-title="Action" 
@@ -42,3 +45,17 @@ Research more about role="alert" and consider using it
        title="Info summary">
    <strong>Theon the ground</strong> think impact investing
 </alert>
+```
+
+or we can have a separate <alert-inline> component
+
+```JSX
+<alert-inline type="warning" 
+       is-closable="true"
+       action-title="Action" 
+       onActionClicked={ someFunction }
+       onClose={ someOtherFunction } 
+>
+   <strong>Theon the ground</strong> think impact investing
+</alert-inline>
+```
