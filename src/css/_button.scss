@@ -34,12 +34,12 @@
   }
 
   &::before {
-    --expand: -10px;
-    bottom: var(--expand);
+    --expand: -9px;
     content: "";
-    left: var(--expand);
     position: absolute;
-    right: var(--expand);
+    width: 32px;
+    height: 32px;
+    left: var(--expand);
     top: var(--expand);
   }
 }

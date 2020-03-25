@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Falcon.io alert component",
   "scripts": {
-    "dev": "parcel ./index.html --public-url / --out-dir ./dist",
+    "dev": "parcel ./index.html ./index-flexbox.html --public-url / --out-dir ./dist",
     "build": "parcel build ./index.html --public-url / --out-dir ./dist"
   },
   "devDependencies": {

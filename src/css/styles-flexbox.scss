@@ -1,0 +1,50 @@
+@import '__constants';
+@import 'content';
+@import 'button';
+@import 'icon';
+@import 'link';
+@import 'alert-flex';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #E1E4E6;
+  color: #495861;
+  display: grid;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  padding: 100px;
+}
+
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+
+button, 
+a {
+  position: relative;
+  outline: none;
+}
+
+button:focus,
+a:focus {
+  &::after {
+    --offset: -5px;
+    border: 2px dotted #009DFF;
+    bottom: var(--offset);
+    content: "";
+    left: var(--offset);
+    position: absolute;
+    right: var(--offset);
+    top: var(--offset);
+  }
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
