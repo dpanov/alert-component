@@ -39,7 +39,7 @@ or we can have a separate <AlertInline> component
 2. Some of the annotated values differ from what the actual values are
    1. the space between **Info summary** and the text below it is 4 pixels
    2. The outlined button in the last alert has different paddings compared to the other outlined buttons
-3. How often will these alerts pop up? Wondering if we should add the alert icons as inline SVGs (easier to change the icon color) or add them as <img> (better performance-wise, because the images will be cached). We shouldn't use icon fonts (because https://cloudfour.com/thinks/seriously-dont-use-icon-fonts/).
+3. How often will these alerts pop up? Wondering if we should add the alert icons as inline SVGs (easier to change the icon color) or add them as `<img>` (better performance-wise, because the images will be cached). We shouldn't use icon fonts (because https://cloudfour.com/thinks/seriously-dont-use-icon-fonts/).
 4. Inline alert with link - close button is not at the same position. Is this intentional?
 5. Is the action button always positioned to the right when there's no title in the alert?
 6. Is the action button really a button? What is its function?
